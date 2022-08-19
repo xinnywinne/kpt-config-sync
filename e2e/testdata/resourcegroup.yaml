@@ -1,0 +1,1982 @@
+apiVersion: test.dev/v1alpha1
+kind: TestGroup
+metadata:
+  name: root-sync
+spec:
+  resources:
+  - group: ""
+    kind: Namespace
+    name: safety-config-management-system-root-sync
+    namespace: ""
+  - group: ""
+    kind: Namespace
+    name: foo
+    namespace: ""
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:aggregated-metrics-reader
+    namespace: ""
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:metrics-server
+    namespace: ""
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: metrics-server:system:auth-delegator
+    namespace: ""
+  - group: rbac.authorization.k8s.io
+    kind: ClusterRoleBinding
+    name: system:metrics-server
+    namespace: ""
+  - group: apiregistration.k8s.io
+    kind: APIService
+    name: v1beta1.metrics.k8s.io
+    namespace: ""
+  - group: ""
+    kind: ServiceAccount
+    name: metrics-server
+    namespace: kube-system
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+    name: metrics-server-auth-reader
+    namespace: kube-system
+  - group: ""
+    kind: Service
+    name: metrics-server
+    namespace: kube-system
+  - group: apps
+    kind: Deployment
+    name: metrics-server
+    namespace: kube-system
+  - group: ""
+    kind: ConfigMap
+    name: cm1
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm10
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm100
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1000
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm10000
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1001
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1002
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1003
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1004
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1005
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1006
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1007
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1008
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1009
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm101
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1010
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1011
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1012
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1013
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1014
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1015
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1016
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1017
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1018
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1019
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm102
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1020
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1021
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1022
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1023
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1024
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1025
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1026
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1027
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1028
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1029
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm103
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1030
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1031
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1032
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1033
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1034
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1035
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1036
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1037
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1038
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1039
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm104
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1040
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1041
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1042
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1043
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1044
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1045
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1046
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1047
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1048
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1049
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm105
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1050
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1051
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1052
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1053
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1054
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1055
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1056
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1057
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1058
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1059
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm106
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1060
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1061
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1062
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1063
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1064
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1065
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1066
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1067
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1068
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1069
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm107
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1070
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1071
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1072
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1073
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1074
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1075
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1076
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1077
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1078
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1079
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm108
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1080
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1081
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1082
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1083
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1084
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1085
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1086
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1087
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1088
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1089
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm109
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1090
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1091
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1092
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1093
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1094
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1095
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1096
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1097
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1098
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1099
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm11
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm110
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1100
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1101
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1102
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1103
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1104
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1105
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1106
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1107
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1108
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1109
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm111
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1110
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1111
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1112
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1113
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1114
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1115
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1116
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1117
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1118
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1119
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm112
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1120
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1121
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1122
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1123
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1124
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1125
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1126
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1127
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1128
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1129
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm113
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1130
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1131
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1132
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1133
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1134
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1135
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1136
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1137
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1138
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1139
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm114
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1140
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1141
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1142
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1143
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1144
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1145
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1146
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1147
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1148
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1149
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm115
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1150
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1151
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1152
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1153
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1154
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1155
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1156
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1157
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1158
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1159
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm116
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1160
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1161
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1162
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1163
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1164
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1165
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1166
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1167
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1168
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1169
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm117
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1170
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1171
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1172
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1173
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1174
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1175
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1176
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1177
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1178
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1179
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm118
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1180
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1181
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1182
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1183
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1184
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1185
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1186
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1187
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1188
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1189
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm119
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1190
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1191
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1192
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1193
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1194
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1195
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1196
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1197
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1198
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1199
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm12
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm120
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1200
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1201
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1202
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1203
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1204
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1205
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1206
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1207
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1208
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1209
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm121
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1210
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1211
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1212
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1213
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1214
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1215
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1216
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1217
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1218
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1219
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm122
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1220
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1221
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1222
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1223
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1224
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1225
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1226
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1227
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1228
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1229
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm123
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1230
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1231
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1232
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1233
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1234
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1235
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1236
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1237
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1238
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1239
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm124
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1240
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1241
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1242
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1243
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1244
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1245
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1246
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1247
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1248
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1249
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm125
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1250
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1251
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1252
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1253
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1254
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1255
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1256
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1257
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1258
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1259
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm126
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1260
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1261
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1262
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1263
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1264
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1265
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1266
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1267
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1268
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1269
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm127
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1270
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1271
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1272
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1273
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1274
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1275
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1276
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1277
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1278
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1279
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm128
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1280
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1281
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1282
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1283
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1284
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1285
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1286
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1287
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1288
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1289
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm129
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1290
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1291
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1292
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1293
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1294
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1295
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1296
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1297
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1298
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1299
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm13
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm130
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1300
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1301
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1302
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1303
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1304
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1305
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1306
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1307
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1308
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1309
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm131
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1310
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1311
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1312
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1313
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1314
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1315
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1316
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1317
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1318
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1319
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm132
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1320
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1321
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1322
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1323
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1324
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1325
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1326
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1327
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1328
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1329
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm133
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1330
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1331
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1332
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1333
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1334
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1335
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1336
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1337
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1338
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1339
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm134
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1340
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1341
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1342
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1343
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1344
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1345
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1346
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1347
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1348
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1349
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm135
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1350
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1351
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1352
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1353
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1354
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1355
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1356
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1357
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1358
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1359
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm136
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1360
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1361
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1362
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1363
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1364
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1365
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1366
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1367
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1368
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1369
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm137
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1370
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1371
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1372
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1373
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1374
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1375
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1376
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1377
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1378
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1379
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm138
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1380
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1381
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1382
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1383
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1384
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1385
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1386
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1387
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1388
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1389
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm139
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1390
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1391
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1392
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1393
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1394
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1395
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1396
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1397
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1398
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1399
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm14
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm140
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1400
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1401
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1402
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1403
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1404
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1405
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1406
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1407
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1408
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1409
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm141
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1410
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1411
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1412
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1413
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1414
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1415
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1416
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1417
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1418
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1419
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm142
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1420
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1421
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1422
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1423
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1424
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1425
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1426
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1427
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1428
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1429
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm143
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1430
+    namespace: foo
+  - group: ""
+    kind: ConfigMap
+    name: cm1431
+    namespace: foo
